@@ -1,0 +1,516 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: $maintext
+	font-size: 14px
+
+::selection
+	background-color: $accent
+	color: $secondarytext
+
+html, body
+	height: 100%
+
+body
+	color: $maintext
+	font-size: 14px
+	-webkit-text-size-adjust: 100%
+	position: relative
+	line-height: 1.45
+	font-family: $default-font
+	max-width: 100%
+	overflow-x: hidden
+	z-index: 1
+	input, textarea
+		-webkit-appearance: none
+		border: $maintext 1px solid
+		outline: none
+		resize: none
+		width: 100%
+		margin-bottom: 23px
+		padding-left: 20px
+		padding-top: 10px
+		padding-bottom: 10px
+		font-family: "roboto-example", sans-serif
+		font-size: 14px
+		&:focus
+			border: $accent 1px solid
+			&:focus:required:invalid
+				border-color: red
+			&:required:valid
+				border-color: green
+
+i
+	font-family: "fa-regular"
+
+a
+	text-decoration: none
+	&:hover
+		text-decoration: none
+
+#go-top
+	position: fixed
+	text-align: center
+	bottom: 25px
+	right: 10px
+	cursor: pointer
+	display: none
+	width: 50px
+	height: 50px
+	background: none
+	color: $maintext
+	&:hover
+		i
+			color: $accent
+
+.header, .story, .team, .quote, .contact, .footer
+	height: inherit
+
+.background
+	background: url(../img/img.jpg) no-repeat center
+	background-size: cover
+	position: relative
+	z-index: -2
+
+.overlay
+	&::before
+		content: ""
+		position: absolute
+		background-color: $overlay
+		opacity: 0.85
+		height: 100%
+		width: 100%
+		top: 0
+		left: 0
+		z-index: -1
+
+.wrapper
+	margin: 0 auto
+	max-width: 1200px
+	padding: 0 15px
+
+
+.a_button
+	margin-top: 50px
+	box-sizing: border-box
+	border: 1px solid $accent
+	color: $accent
+	text-transform: uppercase
+	text-align: center
+	padding: 10px 15px
+	transition: $transition
+	width: inherit
+	&:hover
+		background-color: $accent
+		color: $secondarytext
+		transform: scale(1.1)
+		transition: $transition
+
+.header
+	padding-bottom: 25px
+
+.nav_nav
+	padding-top: 15px
+
+.nav_links
+	display: flex
+	justify-content: flex-end
+
+
+.nav_link
+	text-decoration: none
+	color: $secondarytext
+	font-size: 13px
+	font-weight: normal
+	text-transform: uppercase
+	letter-spacing: 0.33px
+	margin-left: 20px
+	transition: $transition
+	&::after
+		content: ""
+		display: block
+		background-color: $accent
+		width: 100%
+		height: 2px
+		transform: translateY(18px) scale(0)
+		transition: $transition
+	&:hover
+		color: $accent
+		text-decoration: none
+		transition: $transition
+		&::after
+			transform: translateY(18px) scale(1)
+			transition: $transition
+	&-footer
+		margin-left: 0
+		&::after
+			display: none
+
+.menu_btn
+	display: none
+	position: absolute
+	top: 15px
+	right: 5%
+	width: 40px
+	height: 40px
+	line-height: 40px
+	text-align: center
+	border-radius: 50%
+	background-color: $accent
+	padding: 0
+	border: none
+	float: right
+	display: none
+	img
+		width: 60%
+
+
+.header-text
+	text-align: center
+	h2
+		font-family: "PlayfairDisplay", sans-serif
+		font-size: 32px
+		color: $secondarytext
+		text-align: center
+		margin-top: 170px
+		margin-bottom: 0
+		position: relative
+		&::after
+			content: ''
+			display: block
+			background: $accent
+			width: 50px
+			height: 1px
+			position: absolute
+			left: 47%
+			margin-top: 20px
+	p
+		color: $secondarytext
+		margin-top: 50px
+
+.autoplay_content
+	margin-bottom: 60px
+
+.story
+	margin: 70px 0
+	h3, p
+		font-family: "PlayfairDisplay", sans-serif
+		font-size: 22px
+		color: $maintext
+		text-align: left
+	h3
+		font-weight: bold
+	p
+		font-family: "roboto-example"
+	img
+		text-align: center
+
+.story_button
+	margin-left: 10px
+
+.video
+	height: 425px
+	margin-bottom: 25px
+	text-align: center
+	p
+		margin-top: 15px
+		text-align: center
+		color: $secondarytext
+		transition: $transition
+		&:hover
+			color: $accent
+			transition: $transition
+	video
+		display: none
+	&_button
+		text-align: center
+		width: 156px
+		height: 156px
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-left: -78px
+		margin-top: -78px
+	&_play
+		text-align: center
+		background: none
+		border: none
+		transition: $transition
+		&:hover
+			transform: scale(1.1)
+			transition: $transition
+		&:focus
+			outline: none
+
+
+.expertise
+	margin-bottom: 18px
+	h3
+		text-transform: uppercase
+		font-family: "PlayfairDisplay", sans-serif
+		font-weight: bold
+		font-size: 22px
+		color: $maintext
+		text-align: center
+	&_product
+		text-align: center
+		transition: $transition
+		padding: 20px
+		&:hover
+			background-color: $accent
+			opacity: 0.8
+			border-radius: 5%
+			transition: $transition
+			i
+				color: $secondarytext
+		p
+			margin-top: 35px
+			margin-bottom: 0px
+			text-align: center
+	&_products
+		margin: 80px 0
+		i
+			font-family: "fa-regular"
+			color: $accent
+
+.head-p
+	font-family: "PlayfairDisplay", sans-serif
+	color: #333333
+	&::after
+		content: ''
+		display: block
+		background: $maintext
+		width: 50px
+		height: 2px
+		position: absolute
+		left: 47%
+		margin-top: 18px
+		opacity: 0.5
+
+.team
+	padding-bottom: 25px
+	h3
+		text-transform: uppercase
+		font-family: "PlayfairDisplay", sans-serif
+		font-weight: bold
+		font-size: 22px
+		color: $secondarytext
+		margin-top: 72px
+	&-p
+		color: $secondarytext
+		&::after
+			content: ''
+			background: $secondarytext
+	&_avatarz
+		text-align: center
+		margin-top: 55px
+		p
+			font-size: 13px
+			color: $secondarytext
+			text-align: center
+		b
+			font-weight: bold
+		img
+			width: inherit
+			height: inherit
+			margin-bottom: 10px
+	&_avatar
+		p
+			margin-bottom: 12px
+	&_button
+		margin-top: 65px
+		text-align: center
+		p
+			font-size: 13px
+			color: $secondarytext
+			text-align: center
+			margin-bottom: 40px
+
+
+.ourwork
+	padding-top: 70px
+	p
+		font-size: 22px
+		font-family: "PlayfairDisplay", sans-serif
+		font-weight: bold
+		margin-bottom: 0
+	a
+		text-decoration: none
+		color: $maintext
+		transition: $transition
+		&:hover
+			color: $accent
+			text-decoration: none
+			transition: $transition
+		&::after
+			content: "\f105"
+			font-family: "fa-regular"
+			color: $maintext
+			padding-left: 10px
+
+.works
+	padding-top: 70px
+	margin-bottom: 70px
+	&_button
+		margin-bottom: 70px
+	&_overlay
+		position: absolute
+		width: 100%
+		height: 100%
+		background: $maintext
+		opacity: 0.7
+		display: flex
+		align-items: center
+		justify-content: center
+		top:	100%
+		left: 0
+		transition: all 0.5s
+		i
+			color: $accent
+	&_work
+		overflow: hidden
+		position: relative
+		transition: all 0.5s
+		&:hover
+			.works_overlay
+				top: 0
+				left: 0
+				transition: all 0.5s
+		img
+			display: block
+			height: 200px
+			width: 100%
+			margin: 0 auto
+
+.quote
+	margin-bottom: 70px
+
+.slider-for
+	text-align: center
+	padding-top: 135px
+	color: $secondarytext
+	position: relative
+	&::before
+		content: "\f10d"
+		font-family: "fa-regular"
+		color: $secondarytext
+		position: absolute
+		top: 20%
+		left: 48%
+		font-size: 2em
+	p
+		font-family: "PlayfairDisplay", sans-serif
+		margin-bottom: 50px
+
+.slider-nav
+	width: 400px
+	margin: 0 auto
+	padding: 20px
+	img
+		width: 100px! important
+		height: 100px! important
+		border-radius: 50%
+		margin: 0 10px
+		border: 1px solid $secondarytext
+
+.contact
+
+
+.contact-p
+	font-size: 22px
+	font-family: "PlayfairDisplay", sans-serif
+	font-weight: bold
+	margin-bottom: 35px
+
+.submit_button
+	background-color: $secondarytext
+	width: inherit
+
+.clients
+	width: 25%
+	height: auto
+
+.footer
+	&_logo
+		padding: 70px 25px 0 10px
+		img
+			margin-bottom: 35px
+		p
+			color: $secondarytext
+			margin-bottom: 80px
+	&_locatin
+		padding: 85px 10px 0 25px
+		&-p
+			margin-bottom: 45px
+		p
+			font-size: 15px
+			color: $secondarytext
+			padding-left: 10px
+		&-country, &-phone, &-mail
+			position: relative
+			&::before
+				content: "\f3c5"
+				color: $secondarytext
+				font-family: "fa-regular"
+				position: absolute
+				top: 0
+				left: -5%
+		&-phone
+			&::before
+				content: "\f095"
+		&-mail
+			&::before
+				content: "\f0e0"
+	&_suscribe
+		padding: 85px 10px 0 25px
+		p
+			font-size: 15px
+			color: $secondarytext
+			margin-bottom: 45px
+		span
+			float: right
+			color: $secondarytext
+	&_form
+		position: relative
+		margin-bottom: 30px
+		&-input
+			width: 80%
+			margin: 0
+			background: none
+			color: rgba(255, 255, 255, 255)
+			&::placeholder
+				color: $secondarytext
+	&_button
+		padding: 0
+		border: 1px solid $maintext
+		height: inherit
+		width: inherit
+		float: right
+		box-sizing: border-box
+		padding: 5px
+		i
+			color: $maintext
+	&_social
+		display: flex
+		justify-content: space-between
+		margin-bottom: 70px
+		i
+			display: flex
+			flex-direction: row
+			justify-content: center
+			align-items: center
+			text-decoration: none
+			border: 1px solid $secondarytext
+			border-radius: 50%
+			color: $secondarytext
+			padding: 5px
+			width: 35px
+			height: 35px
+			transition: $transition
+			&:hover
+				background-color: $accent
+				transition: $transition
+
+@import "media" // Always at the end

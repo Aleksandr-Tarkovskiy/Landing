@@ -1,0 +1,174 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+
+//Extra large: ≥1200px
++media-breakpoint-down(xl)
+
+//Large: ≥992px
++media-breakpoint-down(lg)
+	#go-top
+		display: none
+	.ourwork
+		padding: 0 10%
+		margin: 5% 0
+		p, a
+			width: 100%
+			text-align: center
+			margin-bottom: 20px
+	.nav_link
+		margin-right: 30px
+		margin-left: 0
+		&::after
+			content: ""
+			display: none
+
+//Medium: ≥768px
++media-breakpoint-down(md)
+	#go-top
+		display: none
+	.wrapper
+		margin: 0 auto
+		padding:
+			left: 15px
+			right: 15px
+	.nav_nav
+		height: 300px
+	.nav_links
+		&::after
+			content: ""
+			display: none
+	.nav_link
+		display: flex
+		flex-direction: column
+		font-size: 24px
+		margin-right: 0
+		padding: 15px 0
+
+	.nav_mobile
+		display: block
+		text-decoration: none
+		color: $secondarytext
+		text-align: center
+		z-index: 5
+		width: 300px
+		height: 300px
+		margin-right: 29%
+	.menu_btn
+		display: block
+	.autoplay_content
+		margin-bottom: 20px
+	.slick-dots
+		display: none !important
+
+	.header, .story, .team, .contact, .footer
+			height: inherit
+
+	.head-p, .contact-p, .footer_locatin-p, .footer_logo
+		text-align: center
+
+	.video
+		video
+			width: 738px
+			height: auto
+
+	.expertise, .team,
+		h3, p,
+			text-align: center
+
+	.expertise
+		&_products
+			margin: 0
+		&_product
+			margin: 25px 0
+
+	.story
+		&_button
+			margin: 0 auto
+			margin-top: 20px
+		img
+			width: 100%
+			margin-bottom: 20px
+
+	.team
+		&_avatar
+			p, b
+				font-size: 16px
+		&_button
+			display: flex
+			flex-direction: column
+			align-items: center
+			p
+				font-size: 16px
+		&_btn
+			margin-bottom: 35px
+			width: 150px
+
+
+	.works
+		padding: 0
+		&_work
+			width: 150%
+
+	.quote
+		display: none
+
+	.contact-p
+		margin: 0 auto
+		margin-bottom: 15px
+		img
+			width: 30%
+			height: auto
+
+	.clients
+		width: 100%
+		height: auto
+
+	.footer
+		&_logo
+			p
+				margin: 20px 0
+		&_locatin-p, &_locatin-country, &_locatin-phone, &_locatin-mail,
+			text-align: left
+		&_locatin
+			p
+				padding-left: 20px
+
+
+//Small: ≥576px
++media-breakpoint-down(sm)
+	#go-top
+		display: none
+	.nav_link
+		font-size: 18px
+		margin-right: 0
+	.nav_mobile
+		margin: 0 auto
+		width: 200px
+		height: 400px
+	.video
+		video
+			width: 290px
+			height: 425px
+//Extra small: >0
++media-breakpoint-down(xs)
+
+
+/*==========  Mobile First  ==========*/
+
+//Extra small: <576px
++media-breakpoint-up(xs)
+
+//Small: ≤576px
++media-breakpoint-up(sm)
+
+//Medium: ≤768px
++media-breakpoint-up(md)
+
+//Large: ≤992px
++media-breakpoint-up(lg)
+
+//Extra large: ≤1200px
++media-breakpoint-up(xl)
