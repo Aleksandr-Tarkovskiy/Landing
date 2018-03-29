@@ -72,7 +72,8 @@ $(function() {
 // Button go-top
 $(function() {
 $(".menu_btn").on("click", function() {
-	$(".nav_mobile").toggle();
+		$(this).toggleClass("menu_btn-active");
+		$(".nav_mobile").toggle();
 	});
 });
 
